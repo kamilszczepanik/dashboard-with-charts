@@ -1,4 +1,4 @@
-# Below is a comprehensive, opinionated guide on how to approach your front-end design replication project using React and Material UI with a CSS-based styling strategy. This article is structured to cover the high-level architecture, component breakdown, library comparisons, and a recommended styling approach that balances readability, speed, and reusability.
+**# Below is a comprehensive, opinionated guide on how to approach your front-end design replication project using React and Material UI with a CSS-based styling strategy. This article is structured to cover the high-level architecture, component breakdown, library comparisons, and a recommended styling approach that balances readability, speed, and reusability.
 
 1. High-Level Architecture and Tech Stack
    For replicating the design efficiently while keeping the solution scalable, the following tech stack is recommended:
@@ -11,7 +11,7 @@ MUI Charts: Although dedicated chart libraries (like Recharts or Chart.js) are a
 
 State Management: For the first version I won't be using state management to not increase complexity of the task.
 
-Routing: Leverage React Router for navigation between views (e.g., Dashboard, Sales, Analytics). For MVP only Dashboard
+Routing: Leverage React Router for navigation between views (e.g., Dashboard, Sales, Analytics). For MVP only Dashboard sales and the route will be /dashboard/sales
 
 2. Component Breakdown and File Structure
    To keep your code modular and maintainable, break down the UI into reusable components. Consider the following structure:
@@ -145,3 +145,11 @@ Adopt CSS Modules (SCSS) for more complex layouts or components that require a d
 Stick with Material UI Charts for a unified look and faster integration, as it works seamlessly with the rest of the MUI ecosystem.
 
 This approach ensures that you maintain high reusability, rapid development speed, and clear code organization—all while keeping your project scalable and maintainable over time.
+
+High level implementation plan:
+
+1. Create mock data
+2. Create theme
+3. Create components
+4. Implement Dashboard
+**
