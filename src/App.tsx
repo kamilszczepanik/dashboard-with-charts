@@ -1,15 +1,19 @@
-import { Button, Typography } from "@mui/material";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider, CssBaseline } from "@mui/material";
-import theme from "./theme";
+import { theme } from "./theme";
+import { Sales } from "./pages/Dashboard/Sales";
+import { NotFound } from "./pages/NotFound";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Typography>test</Typography>
-      <Button variant="text">Text</Button>
-      <Button variant="contained">Contained</Button>
-      <Button variant="outlined">Outlined</Button>
+      <Router>
+        <Routes>
+          <Route path="/dashboard/sales" element={<Sales />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Router>
     </ThemeProvider>
   );
 }
