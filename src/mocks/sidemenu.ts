@@ -8,6 +8,11 @@ import HistoryIcon from "@mui/icons-material/History";
 import PersonIcon from "@mui/icons-material/Person";
 import SettingsIcon from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
+import ImageIcon from "@mui/icons-material/Image";
+import AppsIcon from "@mui/icons-material/Apps";
+import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
+import ViewInArIcon from "@mui/icons-material/ViewInAr";
+
 import React from "react";
 import { MenuSection } from "../types";
 
@@ -79,7 +84,7 @@ export const MENU_SECTIONS: MenuSection[] = [
     children: [
       {
         title: "Pages",
-        icon: React.createElement(MenuBookIcon),
+        icon: React.createElement(ImageIcon),
         path: "/pages",
         children: [
           {
@@ -98,12 +103,12 @@ export const MENU_SECTIONS: MenuSection[] = [
       },
       {
         title: "Applications",
-        icon: React.createElement(ExtensionIcon),
+        icon: React.createElement(AppsIcon),
         path: "/applications",
         children: [
           {
             title: "CRM",
-            icon: React.createElement(ExtensionIcon),
+            icon: React.createElement(AppsIcon),
             path: "/applications/crm",
             children: [],
           },
@@ -111,18 +116,18 @@ export const MENU_SECTIONS: MenuSection[] = [
       },
       {
         title: "Ecommerce",
-        icon: React.createElement(ExtensionIcon),
+        icon: React.createElement(ShoppingBasketIcon),
         path: "/ecommerce",
         children: [
           {
             title: "Products",
-            icon: React.createElement(ExtensionIcon),
+            icon: React.createElement(ShoppingBasketIcon),
             path: "/ecommerce/products",
             children: [],
           },
           {
             title: "Orders",
-            icon: React.createElement(ExtensionIcon),
+            icon: React.createElement(ShoppingBasketIcon),
             path: "/ecommerce/orders",
             children: [],
           },
@@ -174,12 +179,12 @@ export const MENU_SECTIONS: MenuSection[] = [
       },
       {
         title: "Components",
-        icon: React.createElement(ExtensionIcon),
+        icon: React.createElement(ViewInArIcon),
         path: "/docs/components",
         children: [
           {
             title: "Button",
-            icon: React.createElement(ExtensionIcon),
+            icon: React.createElement(ViewInArIcon),
             path: "/docs/components/button",
             children: [],
           },
