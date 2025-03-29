@@ -1,4 +1,8 @@
-import { ChannelsPieChartData, SalesCardData } from "../types";
+import {
+  ChannelsPieChartData,
+  RevenueChartData,
+  SalesCardData,
+} from "../types";
 
 export const SALES_CARDS_DATA: SalesCardData[] = [
   {
@@ -29,4 +33,16 @@ export const CHANNELS_PIE_CHART_DATA: ChannelsPieChartData[] = [
   { id: 1, value: 18, label: "Direct", color: "red" },
   { id: 2, value: 10, label: "Organic", color: "black" },
   { id: 3, value: 60, label: "Referral", color: "gray" },
+];
+
+export const REVENUE_CHART_DATA: RevenueChartData[] = [
+  { month: "Apr", facebookAds: 30, googleAds: 20 },
+  { month: "May", facebookAds: 100, googleAds: 80 },
+  { month: "Jun", facebookAds: 200, googleAds: 150 },
+  { month: "Jul", facebookAds: 190, googleAds: 180 },
+  { month: "Aug", facebookAds: 400, googleAds: 300 },
+  { month: "Sep", facebookAds: 500, googleAds: 400 },
+  { month: "Oct", facebookAds: 550, googleAds: 450 },
+  { month: "Nov", facebookAds: 600, googleAds: 500 },
+  { month: "Dec", facebookAds: 700, googleAds: 550 },
 ];

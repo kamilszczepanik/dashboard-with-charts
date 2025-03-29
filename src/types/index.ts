@@ -25,3 +25,10 @@ export interface SalesCardData {
   percentage: string;
   percentageColor: string;
 }
+
+export interface RevenueChartData {
+  month: string;
+  facebookAds: number;
+  googleAds: number;
+}
+
