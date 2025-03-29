@@ -16,6 +16,7 @@ export const Layout = ({ children }: LayoutProps) => {
           flexGrow: 1,
           width: { md: `calc(100% - 240px)` },
           ml: { md: "240px" },
+          backgroundColor: "primary.light",
         }}
       >
         <Topbar />

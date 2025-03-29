@@ -22,8 +22,9 @@ export const ChannelsPieChart = () => {
       />
       <Box sx={{ display: "flex", gap: 4, justifyContent: "space-between" }}>
         <Typography variant="body2">
-          More than <span>1,2000,000</span>sales are made using referral
-          marketing and <span>700,000</span>are from social media
+          More than <span style={{ fontWeight: 600 }}>1,2000,000</span> sales
+          are made using referral marketing and{" "}
+          <span style={{ fontWeight: 600 }}>700,000</span> are from social media
         </Typography>
         <Button sx={{ width: "fit-content" }} variant="outlined">
           READ MORE

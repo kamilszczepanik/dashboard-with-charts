@@ -43,6 +43,7 @@ export const UserMenu = () => {
                   }
                 }}
                 sx={{
+                  color: "primary.light",
                   "&.Mui-selected": {
                     bgcolor: "primary.light",
                     "&:hover": {
@@ -87,9 +88,12 @@ export const UserMenu = () => {
                               bgcolor: "primary.light",
                             },
                           },
+                          color: "primary.light",
                         }}
                       >
-                        <ListItemIcon sx={{ minWidth: 40 }}>
+                        <ListItemIcon
+                          sx={{ minWidth: 40, color: "primary.light" }}
+                        >
                           {child.icon}
                         </ListItemIcon>
                         <ListItemText primary={child.title} />

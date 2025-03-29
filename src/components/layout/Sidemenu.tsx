@@ -40,14 +40,17 @@ export const Sidemenu = () => {
         position: "fixed",
         left: 0,
         top: 0,
-        bgcolor: "background.paper",
+        bgcolor: "primary.dark",
         overflowY: "auto",
       }}
     >
       <Box sx={{ p: 2 }}>
         <Box sx={{ display: "flex", alignItems: "center" }}>
-          <GridViewIcon />
-          <Typography variant="body2" sx={{ fontWeight: "bold" }}>
+          <GridViewIcon sx={{ color: "primary.light" }} />
+          <Typography
+            variant="body2"
+            sx={{ fontWeight: "bold", color: "primary.light" }}
+          >
             Material Dashboard PRO
           </Typography>
         </Box>
@@ -62,7 +65,7 @@ export const Sidemenu = () => {
                     px: 2,
                     py: 1,
                     display: "block",
-                    color: "text.secondary",
+                    color: "primary.light",
                   }}
                 >
                   {section.label}
@@ -81,23 +84,29 @@ export const Sidemenu = () => {
                         }
                       }}
                       sx={{
+                        color: "primary.light",
                         "&.Mui-selected": {
-                          bgcolor: "primary.light",
+                          bgcolor: "primary.main",
                           "&:hover": {
-                            bgcolor: "primary.light",
+                            bgcolor: "primary.main",
                           },
+                        },
+                        "&:hover": {
+                          bgcolor: "primary.main",
                         },
                       }}
                     >
-                      <ListItemIcon sx={{ minWidth: 40 }}>
+                      <ListItemIcon
+                        sx={{ minWidth: 40, color: "primary.light" }}
+                      >
                         {item.icon}
                       </ListItemIcon>
                       <ListItemText primary={item.title} />
                       {item.children.length > 0 &&
                         (expandedItems.includes(item.path) ? (
-                          <ExpandLess />
+                          <ExpandLess sx={{ color: "primary.light" }} />
                         ) : (
-                          <ExpandMore />
+                          <ExpandMore sx={{ color: "primary.light" }} />
                         ))}
                     </ListItemButton>
                   </ListItem>
@@ -115,15 +124,21 @@ export const Sidemenu = () => {
                               onClick={() => navigate(child.path)}
                               sx={{
                                 pl: 4,
+                                color: "primary.light",
                                 "&.Mui-selected": {
-                                  bgcolor: "primary.light",
+                                  bgcolor: "primary.main",
                                   "&:hover": {
-                                    bgcolor: "primary.light",
+                                    bgcolor: "primary.main",
                                   },
+                                },
+                                "&:hover": {
+                                  bgcolor: "primary.main",
                                 },
                               }}
                             >
-                              <ListItemIcon sx={{ minWidth: 40 }}>
+                              <ListItemIcon
+                                sx={{ minWidth: 40, color: "primary.light" }}
+                              >
                                 {child.icon}
                               </ListItemIcon>
                               <ListItemText primary={child.title} />

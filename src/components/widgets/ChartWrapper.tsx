@@ -1,5 +1,6 @@
 import { InfoOutline } from "@mui/icons-material";
 import { Box, SxProps, Tooltip, Typography } from "@mui/material";
+import { grey } from "@mui/material/colors";
 
 interface ChartWrapperProps {
   title: string;
@@ -17,7 +18,7 @@ export const ChartWrapper = ({
   return (
     <Box
       sx={{
-        bgcolor: "background.paper",
+        bgcolor: grey[200],
         borderRadius: 4,
         boxShadow: 1,
         p: 2,
