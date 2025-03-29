@@ -4,6 +4,8 @@ import { ChannelsPieChart } from "../../components/widgets/ChannelsPieChart";
 import { RevenueChart } from "../../components/widgets/RevenueChart";
 import { ChartWrapper } from "../../components/widgets/ChartWrapper";
 import { grey } from "@mui/material/colors";
+import { SalesByAgeChart } from "../../components/widgets/SalesByAgeChart";
+import { SalesByCountryChart } from "../../components/widgets/SalesByCountryChart";
 
 export const Sales = () => {
   return (
@@ -53,6 +55,14 @@ export const Sales = () => {
           tooltipTitle="Revenue information here"
         >
           <RevenueChart />
+        </ChartWrapper>
+      </Box>
+      <Box sx={{ display: "flex", gap: 2, height: 400 }}>
+        <ChartWrapper sx={{ flex: 2 }} title="Sales by age">
+          <SalesByAgeChart />
+        </ChartWrapper>
+        <ChartWrapper sx={{ flex: 1 }} title="Sales by Country">
+          <SalesByCountryChart />
         </ChartWrapper>
       </Box>
     </Box>

@@ -36,13 +36,40 @@ export const CHANNELS_PIE_CHART_DATA: ChannelsPieChartData[] = [
 ];
 
 export const REVENUE_CHART_DATA: RevenueChartData[] = [
-  { month: "Apr", facebookAds: 30, googleAds: 20 },
-  { month: "May", facebookAds: 100, googleAds: 80 },
-  { month: "Jun", facebookAds: 200, googleAds: 150 },
-  { month: "Jul", facebookAds: 190, googleAds: 180 },
-  { month: "Aug", facebookAds: 400, googleAds: 300 },
-  { month: "Sep", facebookAds: 500, googleAds: 400 },
-  { month: "Oct", facebookAds: 550, googleAds: 450 },
-  { month: "Nov", facebookAds: 600, googleAds: 500 },
-  { month: "Dec", facebookAds: 700, googleAds: 550 },
+  { month: "Apr", facebookAds: 40, googleAds: 0 },
+  { month: "May", facebookAds: 100, googleAds: 30 },
+  { month: "Jun", facebookAds: 200, googleAds: 40 },
+  { month: "Jul", facebookAds: 190, googleAds: 110 },
+  { month: "Aug", facebookAds: 400, googleAds: 150 },
+  { month: "Sep", facebookAds: 350, googleAds: 210 },
+  { month: "Oct", facebookAds: 500, googleAds: 290 },
+  { month: "Nov", facebookAds: 450, googleAds: 260 },
+  { month: "Dec", facebookAds: 700, googleAds: 290 },
+];
+
+export const SALES_BY_AGE_DATA = [
+  {
+    ageGroup: "16-20",
+    value: 15,
+  },
+  {
+    ageGroup: "21-25",
+    value: 20,
+  },
+  {
+    ageGroup: "26-30",
+    value: 12,
+  },
+  {
+    ageGroup: "31-36",
+    value: 60,
+  },
+  {
+    ageGroup: "36-42",
+    value: 20,
+  },
+  {
+    ageGroup: "42+",
+    value: 15,
+  },
 ];

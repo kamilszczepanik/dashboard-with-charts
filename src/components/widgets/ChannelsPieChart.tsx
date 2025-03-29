@@ -30,7 +30,7 @@ export const ChannelsPieChart = () => {
           sx={{
             width: "fit-content",
             backgroundColor: "primary.light",
-            color: "primary.main",
+            color: "primary.dark",
             fontWeight: 600,
             minWidth: "120px",
           }}
