@@ -18,7 +18,11 @@ export const NotFound = () => {
       <Typography variant="h1">404</Typography>
       <Typography variant="h6">Page not found</Typography>
       <Typography variant="body1">This page is not implemented yet</Typography>
-      <Button variant="contained" color="primary" onClick={() => navigate("/")}>
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={() => navigate("/dashboard/sales")}
+      >
         Go to /dashboard/sales
       </Button>
     </Box>

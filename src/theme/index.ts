@@ -11,7 +11,6 @@ export const theme = createTheme({
   },
   typography: {
     fontFamily: "Roboto, Arial, sans-serif",
-
     h1: {
       fontSize: "2rem",
       fontWeight: 600,
@@ -33,20 +32,39 @@ export const theme = createTheme({
       fontWeight: 600,
     },
     h6: {
-      fontSize: "0.95rem",
+      fontSize: "1rem",
       fontWeight: 600,
-      color: grey[700],
     },
     body1: {
       fontSize: "0.92rem",
-      color: grey[800],
     },
     body2: {
       fontSize: "0.875rem",
-      color: grey[600],
     },
     caption: {
       fontWeight: 900,
+    },
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: 8,
+        },
+      },
+    },
+    MuiListItemButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: 8,
+          margin: "0 8px",
+          "&.Mui-selected": {
+            "&[data-path^='/child-path']": {
+              backgroundColor: "hsl(220, 80%, 30%)",
+            },
+          },
+        },
+      },
     },
   },
 });

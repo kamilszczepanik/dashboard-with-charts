@@ -43,12 +43,14 @@ export const UserMenu = () => {
                   }
                 }}
                 sx={{
-                  color: "primary.light",
                   "&.Mui-selected": {
-                    bgcolor: "primary.light",
+                    bgcolor: "primary.main",
                     "&:hover": {
-                      bgcolor: "primary.light",
+                      bgcolor: "primary.main",
                     },
+                  },
+                  "&:hover": {
+                    bgcolor: "primary.main",
                   },
                 }}
               >
@@ -59,12 +61,19 @@ export const UserMenu = () => {
                     sx={{ width: 32, height: 32 }}
                   />
                 </ListItemIcon>
-                <ListItemText primary={item.title} />
+                <ListItemText
+                  primary={item.title}
+                  sx={{
+                    "& .MuiListItemText-primary": {
+                      color: "primary.light",
+                    },
+                  }}
+                />
                 {item.children.length > 0 &&
                   (expandedItems.includes(item.path) ? (
-                    <ExpandLess />
+                    <ExpandLess sx={{ color: "primary.light" }} />
                   ) : (
-                    <ExpandMore />
+                    <ExpandMore sx={{ color: "primary.light" }} />
                   ))}
               </ListItemButton>
             </ListItem>
@@ -83,12 +92,14 @@ export const UserMenu = () => {
                         sx={{
                           pl: 4,
                           "&.Mui-selected": {
-                            bgcolor: "primary.light",
+                            bgcolor: "primary.main",
                             "&:hover": {
-                              bgcolor: "primary.light",
+                              bgcolor: "primary.main",
                             },
                           },
-                          color: "primary.light",
+                          "&:hover": {
+                            bgcolor: "primary.main",
+                          },
                         }}
                       >
                         <ListItemIcon
@@ -96,7 +107,14 @@ export const UserMenu = () => {
                         >
                           {child.icon}
                         </ListItemIcon>
-                        <ListItemText primary={child.title} />
+                        <ListItemText
+                          primary={child.title}
+                          sx={{
+                            "& .MuiListItemText-primary": {
+                              color: "primary.light",
+                            },
+                          }}
+                        />
                       </ListItemButton>
                     </ListItem>
                   ))}

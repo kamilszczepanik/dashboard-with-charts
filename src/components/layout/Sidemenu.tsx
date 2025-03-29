@@ -131,6 +131,7 @@ export const Sidemenu = () => {
                             <ListItemButton
                               selected={location.pathname === child.path}
                               onClick={() => navigate(child.path)}
+                              data-path={"/child-path"}
                               sx={{
                                 pl: 4,
                                 "&.Mui-selected": {

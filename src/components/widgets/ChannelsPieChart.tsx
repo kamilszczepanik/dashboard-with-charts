@@ -26,7 +26,15 @@ export const ChannelsPieChart = () => {
           are made using referral marketing and{" "}
           <span style={{ fontWeight: 600 }}>700,000</span> are from social media
         </Typography>
-        <Button sx={{ width: "fit-content" }} variant="outlined">
+        <Button
+          sx={{
+            width: "fit-content",
+            backgroundColor: "primary.light",
+            color: "primary.main",
+            fontWeight: 600,
+            minWidth: "120px",
+          }}
+        >
           READ MORE
         </Button>
       </Box>

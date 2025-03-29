@@ -15,16 +15,24 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Router>
-        <Layout>
-          <Routes>
-            <Route
-              path="/"
-              element={<Navigate to="/dashboard/sales" replace />}
-            />
-            <Route path="/dashboard/sales" element={<Sales />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Layout>
+        <Routes>
+          <Route
+            path="/"
+            element={<Navigate to="/dashboard/sales" replace />}
+          />
+          <Route
+            path="/dashboard/*"
+            element={
+              <Layout>
+                <Routes>
+                  <Route path="sales" element={<Sales />} />
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </Layout>
+            }
+          />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </Router>
     </ThemeProvider>
   );
