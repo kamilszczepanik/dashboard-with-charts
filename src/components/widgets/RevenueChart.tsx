@@ -13,7 +13,6 @@ export const RevenueChart = () => {
         xAxis={[
           {
             data: xAxisData,
-            label: "Month",
             valueFormatter: (value) => months[value],
             tickMinStep: 1,
           },
@@ -33,8 +32,7 @@ export const RevenueChart = () => {
             color: "#DB4437",
           },
         ]}
-        width={800}
-        height={400}
+        height={350}
         grid={{ vertical: true, horizontal: true }}
       />
     </div>
