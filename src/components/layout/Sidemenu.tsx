@@ -9,10 +9,11 @@ import {
   Collapse,
 } from "@mui/material";
 import { useNavigate, useLocation } from "react-router-dom";
-import { menuSections } from "../../mocks";
+import { MENU_SECTIONS } from "../../mocks";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import { useState } from "react";
+import { UserMenu } from "../common/UserMenu";
 
 export const Sidemenu = () => {
   const navigate = useNavigate();
@@ -43,8 +44,9 @@ export const Sidemenu = () => {
       }}
     >
       <Box sx={{ p: 2 }}>
+        <UserMenu />
         <List>
-          {menuSections.map((section) => (
+          {MENU_SECTIONS.map((section) => (
             <Box key={section.label}>
               {section.labelVisible && (
                 <Typography

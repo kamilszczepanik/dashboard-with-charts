@@ -5,22 +5,49 @@ import DescriptionIcon from "@mui/icons-material/Description";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import ExtensionIcon from "@mui/icons-material/Extension";
 import HistoryIcon from "@mui/icons-material/History";
+import PersonIcon from "@mui/icons-material/Person";
+import SettingsIcon from "@mui/icons-material/Settings";
+import LogoutIcon from "@mui/icons-material/Logout";
 import React from "react";
+import { MenuSection, SalesCardData } from "../types";
 
-export interface MenuItem {
+export interface UserMenuItem {
   title: string;
-  icon: React.ReactNode;
+  image?: string;
+  icon?: React.ReactNode;
   path: string;
-  children: MenuItem[];
+  children: UserMenuItem[];
 }
 
-export interface MenuSection {
-  label: string;
-  labelVisible: boolean;
-  children: MenuItem[];
-}
+export const USER_MENU: UserMenuItem[] = [
+  {
+    title: "Brooklyn Alice",
+    image: "https://via.placeholder.com/150",
+    path: "/profile",
+    children: [
+      {
+        title: "Profile",
+        icon: React.createElement(PersonIcon),
+        path: "/profile",
+        children: [],
+      },
+      {
+        title: "Settings",
+        icon: React.createElement(SettingsIcon),
+        path: "/settings",
+        children: [],
+      },
+      {
+        title: "Logout",
+        icon: React.createElement(LogoutIcon),
+        path: "/logout",
+        children: [],
+      },
+    ],
+  },
+];
 
-export const menuSections: MenuSection[] = [
+export const MENU_SECTIONS: MenuSection[] = [
   {
     label: "DASHBOARD",
     labelVisible: false,
@@ -168,15 +195,7 @@ export const menuSections: MenuSection[] = [
   },
 ];
 
-export interface SalesCardData {
-  title: string;
-  date: string;
-  amount: string;
-  percentage: string;
-  percentageColor: string;
-}
-
-export const salesCardsData: SalesCardData[] = [
+export const SALES_CARDS_DATA: SalesCardData[] = [
   {
     title: "Sales",
     date: "6 May - 7 May",
