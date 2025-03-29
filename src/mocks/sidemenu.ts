@@ -22,7 +22,7 @@ export interface UserMenuItem {
 export const USER_MENU: UserMenuItem[] = [
   {
     title: "Brooklyn Alice",
-    image: "https://via.placeholder.com/150",
+    image: "https://picsum.photos/seed/hoka/40/40",
     path: "/profile",
     children: [
       {
