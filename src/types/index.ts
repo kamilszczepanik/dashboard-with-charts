@@ -32,3 +32,15 @@ export interface RevenueChartData {
   googleAds: number;
 }
 
+export interface SalesByCountryData {
+  country: string;
+  flag: string;
+  sales: number;
+  bounce: string;
+}
+
+export interface SalesByAgeData {
+  ageGroup: string;
+  value: number;
+  [key: string]: string | number;
+}

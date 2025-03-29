@@ -5,7 +5,8 @@ import { RevenueChart } from "../../components/widgets/RevenueChart";
 import { ChartWrapper } from "../../components/widgets/ChartWrapper";
 import { grey } from "@mui/material/colors";
 import { SalesByAgeChart } from "../../components/widgets/SalesByAgeChart";
-import { SalesByCountryChart } from "../../components/widgets/SalesByCountryChart";
+import { SalesByCountryTable } from "../../components/widgets/SalesByCountryTable";
+import { TopSellingProductsChart } from "../../components/widgets/TopSellingProductsTable";
 
 export const Sales = () => {
   return (
@@ -62,9 +63,12 @@ export const Sales = () => {
           <SalesByAgeChart />
         </ChartWrapper>
         <ChartWrapper sx={{ flex: 1 }} title="Sales by Country">
-          <SalesByCountryChart />
+          <SalesByCountryTable />
         </ChartWrapper>
       </Box>
+      <ChartWrapper sx={{ minHeight: 400 }} title="Top Selling Products">
+        <TopSellingProductsChart />
+      </ChartWrapper>
     </Box>
   );
 };

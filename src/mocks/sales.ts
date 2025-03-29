@@ -1,8 +1,43 @@
 import {
   ChannelsPieChartData,
   RevenueChartData,
+  SalesByAgeData,
+  SalesByCountryData,
   SalesCardData,
 } from "../types";
+
+export const SALES_BY_COUNTRY_DATA: SalesByCountryData[] = [
+  {
+    country: "United State",
+    flag: "🇺🇸",
+    sales: 2500,
+    bounce: "29.9%",
+  },
+  {
+    country: "Germany",
+    flag: "🇩🇪",
+    sales: 3900,
+    bounce: "40.22%",
+  },
+  {
+    country: "Great Britain",
+    flag: "🇬🇧",
+    sales: 1400,
+    bounce: "23.44%",
+  },
+  {
+    country: "Brasil",
+    flag: "🇧🇷",
+    sales: 562,
+    bounce: "32.14%",
+  },
+  {
+    country: "Australia",
+    flag: "🇦🇺",
+    sales: 400,
+    bounce: "56.83%",
+  },
+];
 
 export const SALES_CARDS_DATA: SalesCardData[] = [
   {
@@ -47,7 +82,7 @@ export const REVENUE_CHART_DATA: RevenueChartData[] = [
   { month: "Dec", facebookAds: 700, googleAds: 290 },
 ];
 
-export const SALES_BY_AGE_DATA = [
+export const SALES_BY_AGE_DATA: SalesByAgeData[] = [
   {
     ageGroup: "16-20",
     value: 15,
