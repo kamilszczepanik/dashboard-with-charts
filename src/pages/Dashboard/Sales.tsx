@@ -1,5 +1,6 @@
 import { Box, Card, CardContent, Typography } from "@mui/material";
-import { SALES_CARDS_DATA } from "../../mocks";
+import { SALES_CARDS_DATA } from "../../mocks/sales";
+import { ChannelsPieChart } from "../../components/widgets/ChannelsPieChart";
 
 export const Sales = () => {
   return (
@@ -27,6 +28,7 @@ export const Sales = () => {
           </CardContent>
         </Card>
       ))}
+      <ChannelsPieChart />
     </Box>
   );
 };

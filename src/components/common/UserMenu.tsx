@@ -9,7 +9,7 @@ import {
   Avatar,
 } from "@mui/material";
 import { useNavigate, useLocation } from "react-router-dom";
-import { USER_MENU } from "../../mocks";
+import { USER_MENU } from "../../mocks/sidemenu";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import { useState } from "react";

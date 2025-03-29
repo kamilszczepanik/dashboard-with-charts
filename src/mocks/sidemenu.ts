@@ -9,7 +9,7 @@ import PersonIcon from "@mui/icons-material/Person";
 import SettingsIcon from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
 import React from "react";
-import { MenuSection, SalesCardData } from "../types";
+import { MenuSection } from "../types";
 
 export interface UserMenuItem {
   title: string;
@@ -192,29 +192,5 @@ export const MENU_SECTIONS: MenuSection[] = [
         children: [],
       },
     ],
-  },
-];
-
-export const SALES_CARDS_DATA: SalesCardData[] = [
-  {
-    title: "Sales",
-    date: "6 May - 7 May",
-    amount: "$230,220",
-    percentage: "+55%",
-    percentageColor: "green",
-  },
-  {
-    title: "Customers",
-    date: "6 May - 7 May",
-    amount: "3.200",
-    percentage: "+12%",
-    percentageColor: "green",
-  },
-  {
-    title: "Avg. Revenue",
-    date: "6 May - 7 May",
-    amount: "$1.200",
-    percentage: "+$213",
-    percentageColor: "gray",
   },
 ];

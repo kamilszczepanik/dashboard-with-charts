@@ -5,6 +5,13 @@ interface MenuItem {
   children: MenuItem[];
 }
 
+export interface ChannelsPieChartData {
+  id: number;
+  value: number;
+  label: string;
+  color: string;
+}
+
 export interface MenuSection {
   label: string;
   labelVisible: boolean;
