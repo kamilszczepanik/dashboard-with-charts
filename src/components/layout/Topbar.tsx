@@ -1,15 +1,10 @@
-import { Home, Menu } from "@mui/icons-material";
-import { Badge, TextField, Typography } from "@mui/material";
-import { useLocation } from "react-router-dom";
+import { Badge, TextField } from "@mui/material";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import SettingsIcon from "@mui/icons-material/Settings";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import { Breadcrumb } from "./Breadcrumb";
 
 export const Topbar = () => {
-  const location = useLocation();
-  const pathnames = location.pathname.split("/").filter(Boolean);
-  const pageTitle = pathnames[pathnames.length - 1];
-
   return (
     <div
       style={{
@@ -21,28 +16,7 @@ export const Topbar = () => {
         padding: "16px",
       }}
     >
-      <div style={{ display: "flex", alignItems: "center", gap: "64px" }}>
-        <div>
-          <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-            <Home />
-            <Typography>/</Typography>
-            {pathnames.map((segment, index, array) => (
-              <Typography
-                key={index}
-                component="span"
-                sx={{
-                  fontWeight: index === array.length - 1 ? "bold" : "normal",
-                }}
-              >
-                {index > 0 && " / "}
-                {segment}
-              </Typography>
-            ))}
-          </div>
-          <Typography>{pageTitle}</Typography>
-        </div>
-        <Menu />
-      </div>
+      <Breadcrumb />
       <div
         style={{
           display: "flex",
