@@ -26,16 +26,20 @@ export const Topbar = () => {
           paddingRight: "16px",
         }}
       >
-        <TextField label="Search here" type="search" />
+        <TextField
+          label="Search here"
+          type="search"
+          sx={{ color: "primary" }}
+        />
         <Link to="/profile">
-          <AccountCircleIcon />
+          <AccountCircleIcon color="primary" />
         </Link>
         <Link to="/settings">
-          <SettingsIcon />
+          <SettingsIcon color="primary" />
         </Link>
-        <Badge badgeContent={9} color="primary">
+        <Badge badgeContent={9} color="error" sx={{ color: "white" }}>
           <Link to="/notifications">
-            <NotificationsIcon />
+            <NotificationsIcon color="primary" />
           </Link>
         </Badge>
       </div>

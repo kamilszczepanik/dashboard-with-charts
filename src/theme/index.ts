@@ -33,14 +33,17 @@ export const theme = createTheme({
       fontWeight: 600,
     },
     h6: {
-      fontSize: "1rem",
+      fontSize: "0.95rem",
       fontWeight: 600,
+      color: grey[700],
     },
     body1: {
       fontSize: "0.92rem",
+      color: grey[800],
     },
     body2: {
       fontSize: "0.875rem",
+      color: grey[600],
     },
     caption: {
       fontWeight: 900,

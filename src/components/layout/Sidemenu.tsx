@@ -33,7 +33,7 @@ export const Sidemenu = () => {
     <Box
       sx={{
         width: 240,
-        height: "100vh",
+        height: "100%",
         borderRight: 1,
         borderColor: "divider",
         display: { xs: "none", md: "block" },
@@ -42,6 +42,9 @@ export const Sidemenu = () => {
         top: 0,
         bgcolor: "primary.dark",
         overflowY: "auto",
+        margin: 1,
+        marginBottom: 4,
+        borderRadius: 3,
       }}
     >
       <Box sx={{ p: 2 }}>
@@ -84,7 +87,6 @@ export const Sidemenu = () => {
                         }
                       }}
                       sx={{
-                        color: "primary.light",
                         "&.Mui-selected": {
                           bgcolor: "primary.main",
                           "&:hover": {
@@ -101,7 +103,14 @@ export const Sidemenu = () => {
                       >
                         {item.icon}
                       </ListItemIcon>
-                      <ListItemText primary={item.title} />
+                      <ListItemText
+                        primary={item.title}
+                        sx={{
+                          "& .MuiListItemText-primary": {
+                            color: "primary.light",
+                          },
+                        }}
+                      />
                       {item.children.length > 0 &&
                         (expandedItems.includes(item.path) ? (
                           <ExpandLess sx={{ color: "primary.light" }} />
@@ -124,7 +133,6 @@ export const Sidemenu = () => {
                               onClick={() => navigate(child.path)}
                               sx={{
                                 pl: 4,
-                                color: "primary.light",
                                 "&.Mui-selected": {
                                   bgcolor: "primary.main",
                                   "&:hover": {
@@ -141,7 +149,14 @@ export const Sidemenu = () => {
                               >
                                 {child.icon}
                               </ListItemIcon>
-                              <ListItemText primary={child.title} />
+                              <ListItemText
+                                primary={child.title}
+                                sx={{
+                                  "& .MuiListItemText-primary": {
+                                    color: "primary.light",
+                                  },
+                                }}
+                              />
                             </ListItemButton>
                           </ListItem>
                         ))}

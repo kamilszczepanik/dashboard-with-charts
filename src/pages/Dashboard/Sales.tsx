@@ -22,12 +22,12 @@ export const Sales = () => {
                   justifyContent: "space-between",
                 }}
               >
-                <Typography variant="body1" sx={{ fontWeight: 800 }}>
+                <Typography variant="h6" sx={{ fontWeight: 800 }}>
                   {card.title}
                 </Typography>
                 <Typography variant="body2">{card.date}</Typography>
               </Box>
-              <Typography variant="h6">{card.amount}</Typography>
+              <Typography variant="h4">{card.amount}</Typography>
               <Typography variant="body2">
                 <span style={{ color: card.percentageColor }}>
                   {card.percentage}
