@@ -11,7 +11,13 @@ import { TopSellingProductsTable } from "../../components/widgets/TopSellingProd
 export const Sales = () => {
   return (
     <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-      <Box sx={{ display: "flex", gap: 2 }}>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" },
+          gap: 2,
+        }}
+      >
         {SALES_CARDS_DATA.map((card, index) => (
           <Card
             key={index}
@@ -42,7 +48,14 @@ export const Sales = () => {
         ))}
       </Box>
 
-      <Box sx={{ display: "flex", gap: 2, height: 400 }}>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" },
+          gap: 2,
+          height: { xs: "auto", md: 400 },
+        }}
+      >
         <ChartWrapper
           sx={{ flex: 1 }}
           title="Channels"
@@ -58,7 +71,14 @@ export const Sales = () => {
           <RevenueChart />
         </ChartWrapper>
       </Box>
-      <Box sx={{ display: "flex", gap: 2, height: 400 }}>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" },
+          gap: 2,
+          height: { xs: "auto", md: 400 },
+        }}
+      >
         <ChartWrapper sx={{ flex: 2 }} title="Sales by age">
           <SalesByAgeChart />
         </ChartWrapper>

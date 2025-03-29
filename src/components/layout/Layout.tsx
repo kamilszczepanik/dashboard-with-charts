@@ -15,7 +15,6 @@ export const Layout = ({ children }: LayoutProps) => {
         sx={{
           flexGrow: 1,
           width: { md: `calc(100% - 240px)` },
-          ml: { md: "256px" },
           backgroundColor: "primary.light",
         }}
       >
