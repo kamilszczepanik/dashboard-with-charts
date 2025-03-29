@@ -1,7 +1,7 @@
 import { LineChart } from "@mui/x-charts";
 import { REVENUE_CHART_DATA } from "../../mocks/sales";
 
-export const RavenueChart = () => {
+export const RevenueChart = () => {
   const months = REVENUE_CHART_DATA.map((item) => item.month);
   const facebookData = REVENUE_CHART_DATA.map((item) => item.facebookAds);
   const googleData = REVENUE_CHART_DATA.map((item) => item.googleAds);
@@ -20,7 +20,7 @@ export const RavenueChart = () => {
         ]}
         yAxis={[{ min: 0, max: 700 }]}
         series={[
-          { 
+          {
             curve: "linear",
             data: facebookData,
             label: "Facebook Ads",

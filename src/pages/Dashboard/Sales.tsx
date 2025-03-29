@@ -1,7 +1,7 @@
 import { Box, Card, CardContent, Typography } from "@mui/material";
 import { SALES_CARDS_DATA } from "../../mocks/sales";
 import { ChannelsPieChart } from "../../components/widgets/ChannelsPieChart";
-import { RavenueChart } from "../../components/widgets/RavenueChart";
+import { RevenueChart } from "../../components/widgets/RevenueChart";
 
 export const Sales = () => {
   return (
@@ -30,7 +30,7 @@ export const Sales = () => {
         </Card>
       ))}
       <ChannelsPieChart />
-      <RavenueChart />
+      <RevenueChart />
     </Box>
   );
 };
