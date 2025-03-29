@@ -44,3 +44,13 @@ export interface SalesByAgeData {
   value: number;
   [key: string]: string | number;
 }
+
+export interface TopSellingProductData {
+  id: string;
+  name: string;
+  image: string;
+  orders: number;
+  value: number;
+  adsSpent: number;
+  refunds: number;
+}

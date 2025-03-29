@@ -6,7 +6,7 @@ import { ChartWrapper } from "../../components/widgets/ChartWrapper";
 import { grey } from "@mui/material/colors";
 import { SalesByAgeChart } from "../../components/widgets/SalesByAgeChart";
 import { SalesByCountryTable } from "../../components/widgets/SalesByCountryTable";
-import { TopSellingProductsChart } from "../../components/widgets/TopSellingProductsTable";
+import { TopSellingProductsTable } from "../../components/widgets/TopSellingProductsTable";
 
 export const Sales = () => {
   return (
@@ -67,7 +67,7 @@ export const Sales = () => {
         </ChartWrapper>
       </Box>
       <ChartWrapper sx={{ minHeight: 400 }} title="Top Selling Products">
-        <TopSellingProductsChart />
+        <TopSellingProductsTable />
       </ChartWrapper>
     </Box>
   );

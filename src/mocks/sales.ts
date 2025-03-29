@@ -4,6 +4,7 @@ import {
   SalesByAgeData,
   SalesByCountryData,
   SalesCardData,
+  TopSellingProductData,
 } from "../types";
 
 export const SALES_BY_COUNTRY_DATA: SalesByCountryData[] = [
@@ -106,5 +107,62 @@ export const SALES_BY_AGE_DATA: SalesByAgeData[] = [
   {
     ageGroup: "42+",
     value: 15,
+  },
+];
+
+export const TOP_SELLING_PRODUCTS_DATA: TopSellingProductData[] = [
+  {
+    id: "1",
+    name: "Nike v22 Running",
+    image: "https://picsum.photos/40/40",
+    orders: 8232,
+    value: 130992,
+    adsSpent: 9500,
+    refunds: 13,
+  },
+  {
+    id: "2",
+    name: "Adidas Ultraboost",
+    image: "https://picsum.photos/40/40",
+    orders: 6543,
+    value: 104688,
+    adsSpent: 7800,
+    refunds: 8,
+  },
+  {
+    id: "3",
+    name: "Puma RS-X",
+    image: "https://picsum.photos/40/40",
+    orders: 5432,
+    value: 86912,
+    adsSpent: 6500,
+    refunds: 15,
+  },
+  {
+    id: "4",
+    name: "New Balance 990",
+    image: "https://picsum.photos/40/40",
+    orders: 4321,
+    value: 69136,
+    adsSpent: 5200,
+    refunds: 5,
+  },
+  {
+    id: "5",
+    name: "Reebok Classic",
+    image: "https://picsum.photos/40/40",
+    orders: 3456,
+    value: 55296,
+    adsSpent: 4100,
+    refunds: 12,
+  },
+  {
+    id: "6",
+    name: "Asics Gel-Lyte",
+    image: "https://picsum.photos/40/40",
+    orders: 2345,
+    value: 37520,
+    adsSpent: 2800,
+    refunds: 7,
   },
 ];
