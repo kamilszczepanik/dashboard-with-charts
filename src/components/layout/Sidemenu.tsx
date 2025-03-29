@@ -6,36 +6,24 @@ import {
   ListItemIcon,
   ListItemText,
   Typography,
+  Collapse,
 } from "@mui/material";
 import { useNavigate, useLocation } from "react-router-dom";
-import { menuSections, MenuItem } from "../../mocks";
+import { menuSections } from "../../mocks";
+import ExpandLess from "@mui/icons-material/ExpandLess";
+import ExpandMore from "@mui/icons-material/ExpandMore";
+import { useState } from "react";
 
 export const Sidemenu = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const [expandedItems, setExpandedItems] = useState<string[]>([]);
 
-  const renderMenuItem = (item: MenuItem, level: number = 0) => {
-    const isSelected = location.pathname === item.path;
-
-    return (
-      <ListItem key={item.path} disablePadding>
-        <ListItemButton
-          selected={isSelected}
-          onClick={() => navigate(item.path)}
-          sx={{
-            pl: level * 2,
-            "&.Mui-selected": {
-              bgcolor: "primary.light",
-              "&:hover": {
-                bgcolor: "primary.light",
-              },
-            },
-          }}
-        >
-          <ListItemIcon sx={{ minWidth: 40 }}>{item.icon}</ListItemIcon>
-          <ListItemText primary={item.title} />
-        </ListItemButton>
-      </ListItem>
+  const toggleExpand = (path: string) => {
+    setExpandedItems((prev) =>
+      prev.includes(path)
+        ? prev.filter((item) => item !== path)
+        : [...prev, path]
     );
   };
 
@@ -55,9 +43,6 @@ export const Sidemenu = () => {
       }}
     >
       <Box sx={{ p: 2 }}>
-        <Typography variant="h6" sx={{ mb: 2 }}>
-          Dashboard
-        </Typography>
         <List>
           {menuSections.map((section) => (
             <Box key={section.label}>
@@ -76,8 +61,69 @@ export const Sidemenu = () => {
               )}
               {section.children.map((item) => (
                 <Box key={item.path}>
-                  {renderMenuItem(item)}
-                  {item.children.map((child) => renderMenuItem(child, 1))}
+                  <ListItem disablePadding>
+                    <ListItemButton
+                      selected={location.pathname === item.path}
+                      onClick={() => {
+                        if (item.children.length > 0) {
+                          toggleExpand(item.path);
+                        } else {
+                          navigate(item.path);
+                        }
+                      }}
+                      sx={{
+                        "&.Mui-selected": {
+                          bgcolor: "primary.light",
+                          "&:hover": {
+                            bgcolor: "primary.light",
+                          },
+                        },
+                      }}
+                    >
+                      <ListItemIcon sx={{ minWidth: 40 }}>
+                        {item.icon}
+                      </ListItemIcon>
+                      <ListItemText primary={item.title} />
+                      {item.children.length > 0 &&
+                        (expandedItems.includes(item.path) ? (
+                          <ExpandLess />
+                        ) : (
+                          <ExpandMore />
+                        ))}
+                    </ListItemButton>
+                  </ListItem>
+                  {item.children.length > 0 && (
+                    <Collapse
+                      in={expandedItems.includes(item.path)}
+                      timeout="auto"
+                      unmountOnExit
+                    >
+                      <List component="div" disablePadding>
+                        {item.children.map((child) => (
+                          <ListItem key={child.path} disablePadding>
+                            <ListItemButton
+                              selected={location.pathname === child.path}
+                              onClick={() => navigate(child.path)}
+                              sx={{
+                                pl: 4,
+                                "&.Mui-selected": {
+                                  bgcolor: "primary.light",
+                                  "&:hover": {
+                                    bgcolor: "primary.light",
+                                  },
+                                },
+                              }}
+                            >
+                              <ListItemIcon sx={{ minWidth: 40 }}>
+                                {child.icon}
+                              </ListItemIcon>
+                              <ListItemText primary={child.title} />
+                            </ListItemButton>
+                          </ListItem>
+                        ))}
+                      </List>
+                    </Collapse>
+                  )}
                 </Box>
               ))}
             </Box>

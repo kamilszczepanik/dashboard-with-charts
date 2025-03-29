@@ -47,6 +47,88 @@ export const menuSections: MenuSection[] = [
     ],
   },
   {
+    label: "PAGES",
+    labelVisible: true,
+    children: [
+      {
+        title: "Pages",
+        icon: React.createElement(MenuBookIcon),
+        path: "/pages",
+        children: [
+          {
+            title: "Login",
+            icon: React.createElement(DescriptionIcon),
+            path: "/pages/login",
+            children: [],
+          },
+          {
+            title: "Register",
+            icon: React.createElement(DescriptionIcon),
+            path: "/pages/register",
+            children: [],
+          },
+        ],
+      },
+      {
+        title: "Applications",
+        icon: React.createElement(ExtensionIcon),
+        path: "/applications",
+        children: [
+          {
+            title: "CRM",
+            icon: React.createElement(ExtensionIcon),
+            path: "/applications/crm",
+            children: [],
+          },
+        ],
+      },
+      {
+        title: "Ecommerce",
+        icon: React.createElement(ExtensionIcon),
+        path: "/ecommerce",
+        children: [
+          {
+            title: "Products",
+            icon: React.createElement(ExtensionIcon),
+            path: "/ecommerce/products",
+            children: [],
+          },
+          {
+            title: "Orders",
+            icon: React.createElement(ExtensionIcon),
+            path: "/ecommerce/orders",
+            children: [],
+          },
+        ],
+      },
+      {
+        title: "Authentication",
+        icon: React.createElement(ExtensionIcon),
+        path: "/authentication",
+        children: [
+          {
+            title: "Login",
+            icon: React.createElement(ExtensionIcon),
+            path: "/authentication/login",
+            children: [],
+          },
+          {
+            title: "Register",
+            icon: React.createElement(ExtensionIcon),
+            path: "/authentication/register",
+            children: [],
+          },
+          {
+            title: "Forgot password",
+            icon: React.createElement(ExtensionIcon),
+            path: "/authentication/forgot-password",
+            children: [],
+          },
+        ],
+      },
+    ],
+  },
+  {
     label: "DOCS",
     labelVisible: true,
     children: [
