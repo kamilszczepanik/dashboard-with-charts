@@ -14,6 +14,7 @@ import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import { useState } from "react";
 import { UserMenu } from "../common/UserMenu";
+import GridViewIcon from "@mui/icons-material/GridView";
 
 export const Sidemenu = () => {
   const navigate = useNavigate();
@@ -44,6 +45,12 @@ export const Sidemenu = () => {
       }}
     >
       <Box sx={{ p: 2 }}>
+        <Box sx={{ display: "flex", alignItems: "center" }}>
+          <GridViewIcon />
+          <Typography variant="body2" sx={{ fontWeight: "bold" }}>
+            Material Dashboard PRO
+          </Typography>
+        </Box>
         <UserMenu />
         <List>
           {MENU_SECTIONS.map((section) => (

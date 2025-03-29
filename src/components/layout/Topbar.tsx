@@ -3,6 +3,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import SettingsIcon from "@mui/icons-material/Settings";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import { Breadcrumb } from "./Breadcrumb";
+import { Link } from "react-router-dom";
 
 export const Topbar = () => {
   return (
@@ -26,10 +27,16 @@ export const Topbar = () => {
         }}
       >
         <TextField label="Search here" type="search" />
-        <AccountCircleIcon />
-        <SettingsIcon />
+        <Link to="/profile">
+          <AccountCircleIcon />
+        </Link>
+        <Link to="/settings">
+          <SettingsIcon />
+        </Link>
         <Badge badgeContent={9} color="primary">
-          <NotificationsIcon />
+          <Link to="/notifications">
+            <NotificationsIcon />
+          </Link>
         </Badge>
       </div>
     </div>

@@ -26,21 +26,21 @@ export const USER_MENU: UserMenuItem[] = [
     path: "/profile",
     children: [
       {
-        title: "Profile",
+        title: "Details",
         icon: React.createElement(PersonIcon),
-        path: "/profile",
+        path: "/profile/details",
         children: [],
       },
       {
         title: "Settings",
         icon: React.createElement(SettingsIcon),
-        path: "/settings",
+        path: "/profile/settings",
         children: [],
       },
       {
         title: "Logout",
         icon: React.createElement(LogoutIcon),
-        path: "/logout",
+        path: "/profile/logout",
         children: [],
       },
     ],

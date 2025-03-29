@@ -7,6 +7,10 @@ export const Breadcrumb = () => {
   const pathnames = location.pathname.split("/").filter(Boolean);
   const pageTitle = pathnames[pathnames.length - 1];
 
+  const capitalize = (str: string) => {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  };
+
   return (
     <div>
       <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
@@ -21,11 +25,13 @@ export const Breadcrumb = () => {
             }}
           >
             {index > 0 && " / "}
-            {segment}
+            {capitalize(segment)}
           </Typography>
         ))}
       </div>
-      <Typography>{pageTitle}</Typography>
+      <Typography sx={{ fontWeight: "bold" }}>
+        {capitalize(pageTitle)}
+      </Typography>
     </div>
   );
 };
