@@ -21,17 +21,17 @@ function App() {
             element={<Navigate to="/dashboard/sales" replace />}
           />
           <Route
-            path="/dashboard/*"
+            path="/*"
             element={
               <Layout>
                 <Routes>
-                  <Route path="sales" element={<Sales />} />
+                  <Route path="dashboard/sales" element={<Sales />} />
+                  <Route path="dashboard/analytics" element={<NotFound />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Layout>
             }
           />
-          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
     </ThemeProvider>

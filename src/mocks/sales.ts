@@ -29,10 +29,10 @@ export const SALES_CARDS_DATA: SalesCardData[] = [
 ];
 
 export const CHANNELS_PIE_CHART_DATA: ChannelsPieChartData[] = [
-  { id: 0, value: 15, label: "Facebook", color: "blue" },
-  { id: 1, value: 18, label: "Direct", color: "red" },
-  { id: 2, value: 10, label: "Organic", color: "black" },
-  { id: 3, value: 60, label: "Referral", color: "gray" },
+  { id: 0, value: 300000, label: "Facebook", color: "blue" },
+  { id: 1, value: 360000, label: "Direct", color: "red" },
+  { id: 2, value: 200000, label: "Organic", color: "black" },
+  { id: 3, value: 1200000, label: "Referral", color: "gray" },
 ];
 
 export const REVENUE_CHART_DATA: RevenueChartData[] = [
